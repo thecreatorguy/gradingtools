@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 Filename: submit_grades.py
 Language: Python 3.6
@@ -14,11 +15,10 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 from dotenv import load_dotenv
-
-INCLUDED_DIRECTORIES = ['gradefast', 'provided', 'venv', '.git']
+load_dotenv()
 
 def get_grade_data():
-    dirs = [name for name in next(os.walk('.'))[1] if name not in INCLUDED_DIRECTORIES]
+    dirs = [name for name in next(os.walk('.'))[1] if name not in os.getenv('GRADINGTOOLS_DIRECTORIES')]
     while True:
         for i, d in enumerate(dirs):
             print('[%2d] %s' % (i, d))
@@ -52,8 +52,6 @@ def shadow_element_by_css_selector(driver, selector, index = 0):
     return element
 
 def main():
-    load_dotenv()
-
     # Get which directory to upload
     result = get_grade_data()
     if not result:
