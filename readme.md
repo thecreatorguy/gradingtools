@@ -35,13 +35,13 @@ The last thing to download will be the [chromedriver executable](https://chromed
 the `submit_grades.py` script to upload the grades from gradefast to MyCourses, RIT's online resource for courses. Put
 this in the top level directory, `gradingtools/`.
 
-Finally, you should copy the .env.example to .env and make your changes there using the table below
+Finally, you should copy the `.env.example` as `.env` and make your changes there using the table below.
 
 Setup is complete!
 
 ### .env
 | Variable | Description |
-| --- | --- |
+| ---:| --- |
 | `GRADINGTOOLS_DIRECTORIES` | Directories for grading scripts to ignore when looking for grading roots |
 | `GRADEFAST_SHELL_PATH` | Shell that you want gradefast to execute commands with |
 | `MYCOURSES_USERNAME/PASSWORD` | Self explanatory- used for automatic entry of username and password in MyCourses |
@@ -74,3 +74,6 @@ will be submitted on MyCourses before your very eyes!
 
 Unfortunately, this feature is not yet complete- some rows are skipped in the upload process, so you still have to
 input approximately 1/4 of the grades manually.
+
+#### Todo:
+1. Comment `grade.py` and `submit_grades.py`

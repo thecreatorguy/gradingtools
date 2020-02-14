@@ -11,8 +11,6 @@ grades:
   default enabled: false
 
 commands:
-# - name: Copy Provided Files
-#   command: python3 ../../Provided/movetool.py ..\..\Provided\~labname~
 
 - name: Open Files
   command: Start-Process -FilePath "pycharm64" -ArgumentList "."
