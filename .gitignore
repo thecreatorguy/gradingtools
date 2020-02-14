@@ -1,0 +1,9 @@
+*.sublime-*
+venv
+
+chromedriver.exe
+gradefast/
+
+.env
+lab[0-9]*/
+provided/lab[0-9]*/

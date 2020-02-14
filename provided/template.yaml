@@ -1,0 +1,24 @@
+settings:
+  check zipfiles: true
+  check file extensions: ["py"]
+
+grades:
+- name: Problem Solving
+  points: 25
+
+- name: Other
+  points: 0
+  default enabled: false
+
+commands:
+# - name: Copy Provided Files
+#   command: python3 ../../Provided/movetool.py ..\..\Provided\~labname~
+
+- name: Open Files
+  command: Start-Process -FilePath "pycharm64" -ArgumentList "."
+
+# - name: Grade Script
+#   command: sh grade.sh
+
+- name: Start Command Line
+  command: Start-Process -FilePath "powershell" -ArgumentList "-noexit -command `"[console]::WindowWidth=100; [console]::WindowHeight=42; [console]::BufferWidth=[console]::WindowWidth`""
