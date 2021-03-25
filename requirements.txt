@@ -7,7 +7,7 @@ MarkupSafe==1.1.1
 mistune==0.8.4
 pkg-resources==0.0.0
 python-dotenv==0.11.0
-PyYAML==5.3
+PyYAML==5.4
 selenium==3.141.0
 urllib3==1.25.8
 Werkzeug==1.0.0
